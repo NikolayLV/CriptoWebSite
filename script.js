@@ -1,57 +1,49 @@
-let changes = document.querySelector('.names__color')
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-let changesArr = [];
-
-changesArr = changes;
-
-console.log(changesArr);
-
-function changeColors () {
-    if (changes < 0) {
-        changes.style.color = "green";
-    }
-    else {
-        changes.style.color = "red";
-    }
-}
-
-changeColors();
-
-// // Smooth Scrolling
-// const nav = document.querySelector(".header__nav);
-// const navLinks = nav.querySelectorAll("a");
-//
-// for (const link of navLinks) {
-//     link.addEventListener("click", clickHandler);
-// }
-//
-// function clickHandler(e) {
-//     e.preventDefault();
-//     const href = this.getAttribute("href");
-//     const offsetTop = document.querySelector(href).offsetTop;
-//
-//     scroll({
-//         top: offsetTop,
-//         behavior: "smooth"
-//     });
-// }
-
-// Select all links in the navigation menu
-const navLinks = document.querySelectorAll('.text__header a');
-
-// Add an event listener to each link
-navLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        // Prevent the default link behavior
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
         event.preventDefault();
+        const blockID = anchor.getAttribute('href');
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+};
 
-        // Get the ID of the target section from the link's href attribute
-        const targetId = link.getAttribute('href');
 
-        // Use the scrollIntoView method to smoothly scroll to the target section
-        document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+let container = document.querySelector(".container");
+let signUp = document.querySelector(".text-new");
+let sign = document.querySelector(".Signup");
+let loginBtn = document.querySelector(".text-login");
+let form = document.forms[0];
+
+signUp.addEventListener("click", () => {
+    container.classList.add("active");
+    sign.classList.add("active");
+});
+loginBtn.addEventListener("click", () => {
+    sign.classList.remove("active");
+    container.classList.remove("active");
 });
 
+form.addEventListener("submit", function (e) {
+
+});
+
+form.passwordAgain.addEventListener("input", function () {
+    if (form.passwordAgain.value != form.password.value) {
+        form.passwordAgain.setCustomValidity("Пароль и подтверждение пароля не совпадают.");
+        form.password.setCustomValidity("Пароль и подтверждение пароля не совпадают.");
+    }
+    else {
+        form.passwordAgain.setCustomValidity("");
+        form.password.setCustomValidity("");
+    }
+});
+
+
+let sumbitEmail = document.querySelector('.submitBtn');
+sumbitEmail.addEventListener("submit", function (e) {
+
+});

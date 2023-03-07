@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>CriptoWebSite</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,22 +18,24 @@
         <ul class="text__header">
             <li class="text__li"><a href="#Products">Products</a></li>
             <li class="text__li"><a href="#Prices">Prices</a></li>
-            <li class="text__li"><a href="#Buy">Buy</a></li>
-            <li class="text__li"><a href="#Learn">Learn</a></li>
+            <li class="text__li"><a href="#About">About</a></li>
+            <li class="text__li"><a href="#Start">Start</a></li>
             <li class="text__li"><a href="#Help">Help</a></li>
         </ul>
     </nav>
 
     <div class="header__buttons">
-        <button class="header__btn">Log in</button>
-        <button class="header__btn2">Sing up</button>
+        <a class="header__btn" href="./login.html">Login in</a>
+        <a class="header__btn2" href="./login.html">Sing up</a>
+<!--        <button class="header__btn">Log in</button>-->
+<!--        <button class="header__btn2">Sing up</button>-->
     </div>
 </header>
 
 <main class="main">
     <div class="container">
         <div class="product__text">
-            <h1 class="product__h1" href="#Products">
+            <h1 class="product__h1">
                 Buy, sell and trade crypto today!
             </h1>
 
@@ -41,8 +43,11 @@
                 Trade with confidence and build your future with Australia’s fastest crypto exchange.
             </p>
             <div class="product__btns">
-                <button class="btn__start">Get started!</button>
+
+<!--                <button class="btn__start">Get started!</button>-->
                 <button class="btn__view">View exchange</button>
+                <a class="btn__start" href="https://github.com/NikolayLV">Get started!</a>
+
             </div>
         </div>
         <div class="product__img">
@@ -55,7 +60,7 @@
 
     <div class="prices">
         <div class="prices__title">
-            <p class="prices__p">
+            <p class="prices__p" id="Prices">
                 Most Popular
             </p>
         </div>
@@ -125,7 +130,7 @@
     </div>
 
 
-    <div class="whyWeAre">
+    <div class="whyWeAre" id="About">
         <h1 class="why__h1">Why BTC Markets?</h1>
         <div class="why__contant">
             <div class="why__card">
@@ -147,9 +152,9 @@
     </div>
 
 
-    <div class="trade__container">
+    <div class="trade__container" id="Products">
         <div class="trade__right">
-            <p class="trade__item">Trade</p>
+            <p class="trade__item" >Trade</p>
             <h1 class="trade__h1">Buy, sell and trade crypto with confidence</h1>
             <div class="trade__content">
                 <div class="trade__block">
@@ -246,7 +251,7 @@
     </div>
 
 
-    <div class="start">
+    <div class="start" id="Start">
         <h1 class="start__h1">Start trading in 3 easy steps</h1>
         <div class="start__contant">
             <div class="start__card">
@@ -266,7 +271,8 @@
             </div>
         </div>
         <div class="start_btn">
-            <button class="start__btn">Get started</button>
+<!--            <button class="start__btn">Get started</button>-->
+            <a class="start__btn" href="https://github.com/NikolayLV">Get started</a>
         </div>
     </div>
 
@@ -317,15 +323,51 @@
 <div class="last">
     <h1 class="tradeon__h1">Create an account and start <br>trading with us today!</h1>
 
-        <button class="last__btn">Get started</button>
+<!--        <button class="last__btn">Get started</button>-->
+    <a class="last__btn" href="https://github.com/NikolayLV">Get started</a>
 
 </div>
 
 
 </main>
 
-<footer class="footer">
+<footer class="footer" id="Help">
+    <div id="top-footer">
+        <div class="left-footer">
+            <div class="input">
+                <input type="email" placeholder="Enter your email">
+                <input type="submit" value="Subscribe" class="submitBtn">
+            </div>
 
+        </div>
+        <div class="right-footer">
+            <div class="block">
+                <h2>Support</h2>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Trade</a>
+            </div>
+            <div class="block">
+                <h2>Useful Link</h2>
+                <a href="#">Payment & Tax</a>
+                <a href="#">Team of service</a>
+                <a href="#">Privaci Policy</a>
+            </div>
+            <div class="block">
+                <h2>Our Menu</h2>
+                <a href="#">Best Product</a>
+                <a href="#">Category</a>
+            </div>
+            <div class="block">
+                <h2>Address</h2>
+                <span>Ukraine, Kyiv city<br/> Welcome to Ukraine!</span>
+                <span>Nikolayd2002@gmail.com</span>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-footer">
+        <span>© 2023  - It was made by Mykola Diatlov.</span>
+    </div>
 </footer>
 <script src="script.js"></script>
 </body>
