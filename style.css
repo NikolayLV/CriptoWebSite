@@ -62,12 +62,7 @@ background-color: white;
     transition: 1s;
 }
 
-.header__btn:hover {
-    border: 2px solid #4CFDC7;
-    background: #1d3830;
-    transition: 1s;
-    color: white;
-}
+
 
 
 .header__btn2 {
